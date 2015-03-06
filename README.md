@@ -1,7 +1,7 @@
 # Coursera_TrackDS_EDA_CP1
 Coursera Data Science Track - Exploratory Data Analysis - Course Project 1
 
-Introduction
+# Introduction
 
 This assignment uses data from the UC Irvine Machine Learning Repository, a popular repository for machine learning datasets. In particular, we will be using the “Individual household electric power consumption Data Set” which I have made available on the course web site:
 

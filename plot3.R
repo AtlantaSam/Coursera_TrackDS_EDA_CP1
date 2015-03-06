@@ -1,4 +1,4 @@
-# Plot 1
+# Plot 3
 
 # Per instructions, the code to pull data is included, but I did this task by
 #   creating a "get data" program first...
@@ -19,11 +19,16 @@ data_HPC_2007$Datetime <- as.POSIXct(DateTime)
 
 ##########################################################################
 
-# Plot 1
-hist(data_HPC_2007$Global_active_power, main="Global Active Power", 
-     xlab="Global Active Power (kilowatts)", ylab="Frequency", col="Red")
-
-# Save file
+# Plot 3
 setwd("~/Documents/Coursera/Class 4 - Exploratory Data Analysis/Graphics")
-dev.copy(png, file="plot1.png", height=480, width=480)
+png(file="xplot3.png", height=480, width=480)
+with(data_HPC_2007, {
+  plot(Sub_metering_1~Datetime, type="l",
+       ylab="Energy sub metering", xlab="")
+  lines(Sub_metering_2~Datetime,col='Red')
+  lines(Sub_metering_3~Datetime,col='Blue')
+})
+legend("topright", col=c("black", "red", "blue"), lty=1, lwd=2, 
+       legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), cex=0.9)
 dev.off()
+

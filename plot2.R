@@ -1,4 +1,4 @@
-# Plot 1
+# Plot 2
 
 # Per instructions, the code to pull data is included, but I did this task by
 #   creating a "get data" program first...
@@ -20,10 +20,10 @@ data_HPC_2007$Datetime <- as.POSIXct(DateTime)
 ##########################################################################
 
 # Plot 1
-hist(data_HPC_2007$Global_active_power, main="Global Active Power", 
-     xlab="Global Active Power (kilowatts)", ylab="Frequency", col="Red")
+plot(data_HPC_2007$Global_active_power~data_HPC_2007$Datetime, type="l",
+     ylab="Global Active Power (kilowatts)", xlab="")
 
 # Save file
 setwd("~/Documents/Coursera/Class 4 - Exploratory Data Analysis/Graphics")
-dev.copy(png, file="plot1.png", height=480, width=480)
+dev.copy(png, file="plot2.png", height=480, width=480)
 dev.off()

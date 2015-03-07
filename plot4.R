@@ -1,7 +1,3 @@
-
-
-
-
 # Plot 4
 
 # Per instructions, the code to pull data is included, but I did this task by
@@ -21,9 +17,9 @@ rm(data_HPC_full)
 DateTime <- paste(as.Date(data_HPC_2007$Date), data_HPC_2007$Time)
 data_HPC_2007$Datetime <- as.POSIXct(DateTime)
 
+##########################################################################
 
-## Plot 4
-
+# Plot 4
 setwd("~/Documents/Coursera/Class 4 - Exploratory Data Analysis/Graphics")
 png(file="plot4.png", height=480, width=480)
 par(mfrow=c(2,2), mar=c(4,4,2,1), oma=c(0,0,2,0))
@@ -41,5 +37,4 @@ with(data_HPC_2007, {
   plot(Global_reactive_power~Datetime, type="l", xlab="",
        ylab="Global Rective Power (kilowatts)")
 })
-
 dev.off()

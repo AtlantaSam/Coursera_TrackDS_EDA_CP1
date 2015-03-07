@@ -19,7 +19,7 @@ data_HPC_2007$Datetime <- as.POSIXct(DateTime)
 
 ##########################################################################
 
-# Plot 1
+# Plot 2
 plot(data_HPC_2007$Global_active_power~data_HPC_2007$Datetime, type="l",
      ylab="Global Active Power (kilowatts)", xlab="")
 
